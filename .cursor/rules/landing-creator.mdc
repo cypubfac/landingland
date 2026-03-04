@@ -141,10 +141,11 @@ landingland/
 - **Toujours mettre à jour `vercel.json` quand on crée/supprime une landing**
 
 ## Partir de zéro — IMPORTANT
-- Chaque nouvelle landing DOIT être créée from scratch en se basant sur les exemples de `/landings/free/`
-- NE JAMAIS copier ou s'inspirer d'une landing existante d'une BU (ni la sienne, ni une autre)
-- Sauf si l'utilisateur demande EXPLICITEMENT de reprendre le style d'une landing existante
-- Les exemples dans `free/` sont les seuls modèles de référence autorisés
+- Chaque nouvelle landing DOIT être créée from scratch avec son propre CSS inline
+- NE JAMAIS réutiliser ou copier le CSS/HTML d'une landing existante
+- NE JAMAIS s'inspirer du style visuel d'une autre landing sauf demande explicite de l'utilisateur
+- Les exemples dans `free/` servent uniquement à comprendre la STRUCTURE et les conventions, pas le style
+- Chaque landing doit avoir un design unique adapté au produit/service décrit
 
 ## Ton et contenu
 - Copywriting orienté conversion
