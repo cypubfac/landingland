@@ -14,6 +14,7 @@
     { "source": "/task-flow", "destination": "/landings/free/saas/task-flow/index.html" },
     { "source": "/tech-summit-2025", "destination": "/landings/free/event/tech-summit-2025/index.html" },
     { "source": "/portfolio-minimal", "destination": "/landings/free/freestyle/portfolio-minimal/index.html" },
-    { "source": "/cacao", "destination": "/landings/TEST/ecommerce/cacao/index.html" }
+    { "source": "/cacao", "destination": "/landings/TEST/ecommerce/cacao/index.html" },
+    { "source": "/argile", "destination": "/landings/TEST/freestyle/argile/index.html" }
   ]
 }

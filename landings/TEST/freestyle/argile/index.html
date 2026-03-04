@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Argile — L'art ancestral qui traverse les âges</title>
+  <link rel="stylesheet" href="/shared/base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sepia: #f4e9dc;
+      --terracotta: #c17f59;
+      --earth: #8b5a2b;
+      --ink: #2c1810;
+      --cream: #faf6f0;
+    }
+    body {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      background: var(--cream);
+      color: var(--ink);
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c17f5933' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+    header {
+      text-align: center;
+      padding: clamp(2rem, 5vw, 4rem) 0;
+      border-bottom: 2px solid var(--terracotta);
+    }
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--earth);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    header p {
+      font-style: italic;
+      margin-top: 0.5rem;
+      color: var(--earth);
+      opacity: 0.9;
+    }
+    section {
+      padding: clamp(2rem, 4vw, 3.5rem) 0;
+      border-bottom: 1px solid rgba(139, 90, 43, 0.2);
+    }
+    section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--earth);
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 1rem;
+      border-left: 4px solid var(--terracotta);
+    }
+    section p {
+      font-size: clamp(1rem, 1.2vw, 1.1rem);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .hero {
+      text-align: center;
+      background: linear-gradient(180deg, var(--sepia) 0%, transparent 100%);
+      padding: clamp(2.5rem, 6vw, 5rem) 0;
+    }
+    .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+    .hero .subtitle {
+      font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+      margin: 1rem 0 1.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      background: var(--terracotta);
+      color: var(--cream) !important;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      border: 2px solid var(--earth);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background: var(--earth);
+      transform: translateY(-2px);
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .feature {
+      padding: 1.5rem;
+      background: var(--sepia);
+      border: 1px solid rgba(139, 90, 43, 0.3);
+      text-align: center;
+    }
+    .feature h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      color: var(--earth);
+      margin-bottom: 0.5rem;
+    }
+    .feature p { font-size: 0.95rem; margin: 0; }
+    .cta-section {
+      text-align: center;
+      background: var(--sepia);
+      padding: clamp(2.5rem, 5vw, 4rem) 1.5rem;
+    }
+    .cta-section h2 { border: none; padding: 0; }
+    .cta-section p { margin-bottom: 1.5rem; }
+    .ornament {
+      font-size: 1.5rem;
+      color: var(--terracotta);
+      margin: 0.5rem 0;
+      letter-spacing: 0.5rem;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border: 3px solid var(--terracotta);
+      margin: 1.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>L'Argile</h1>
+      <p>L'art ancestral qui traverse les âges</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="ornament">✦ ✦ ✦</div>
+        <h1>Retrouvez le geste authentique</h1>
+        <p class="subtitle">Depuis la nuit des temps, l'argile accompagne l'homme. Modeler, créer, façonner — un héritage à portée de main.</p>
+        <a href="#decouvrir" class="btn">Découvrir notre atelier</a>
+        <div class="ornament">✦ ✦ ✦</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Une matière vivante</h2>
+        <p>L'argile n'est pas qu'une simple terre. C'est un matériau noble, travaillé par les potiers depuis des millénaires. Elle garde la trace de chaque main qui la touche, de chaque intention qui la façonne.</p>
+        <img src="https://placehold.co/800x400/f4e9dc/8b5a2b?text=Argile+et+poterie" alt="Terre d'argile et poterie traditionnelle" width="800" height="400" loading="lazy">
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Pourquoi l'argile ?</h2>
+        <p>Dans un monde de plastique et de vitesse, l'argile nous ramène à l'essentiel. Elle demande patience, présence et respect. Chaque pièce est unique, chaque création raconte une histoire.</p>
+        <div class="features">
+          <div class="feature">
+            <h3>Naturelle</h3>
+            <p>100 % minérale, sans additif. Une matière brute et honnête.</p>
+          </div>
+          <div class="feature">
+            <h3>Durable</h3>
+            <p>Les poteries anciennes traversent les siècles. Un héritage pour demain.</p>
+          </div>
+          <div class="feature">
+            <h3>Apaisante</h3>
+            <p>Le contact avec la terre apaise l'esprit et recentre le corps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="decouvrir">
+      <div class="container">
+        <div class="ornament">✦ ✦ ✦</div>
+        <h2>Initiez-vous à l'art de la terre</h2>
+        <p>Ateliers, stages et matériel pour débutants et passionnés. Rejoignez une communauté qui perpétue un savoir-faire ancestral.</p>
+        <a href="#" class="btn">Réserver un atelier</a>
+        <div class="ornament">✦ ✦ ✦</div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="text-align: center; padding: 2rem; font-size: 0.9rem; color: var(--earth); opacity: 0.8;">
+    <p>L'Argile — Depuis toujours, pour toujours.</p>
+  </footer>
+</body>
+</html>
