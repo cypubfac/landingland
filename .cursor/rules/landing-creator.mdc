@@ -60,7 +60,16 @@ landingland/
 5. **Ajouter le rewrite dans `vercel.json`**
 6. Charger `/shared/base.css` + `/landings/{bu}/{type}/_type.css` (chemin absolu, sauf freestyle)
 7. CSS custom inline dans `<style>` dans le `<head>`
-8. **OBLIGATOIRE : communiquer l'URL finale au client** → `https://landingland.vercel.app/{slug}`
+8. **OBLIGATOIRE : git add + git commit + git push** pour que la landing soit déployée
+9. **OBLIGATOIRE : communiquer l'URL finale au client** → `https://landingland.vercel.app/{slug}`
+
+### Commit & Push — TRÈS IMPORTANT
+- Après CHAQUE création ou modification de landing, tu DOIS faire :
+  1. `git add -A`
+  2. `git commit -m "feat: add landing {slug} for {bu}"`
+  3. `git push origin main`
+- Sans push, la landing n'est PAS en ligne (Vercel déploie uniquement sur push)
+- Ne JAMAIS oublier cette étape, c'est ce qui rend la landing accessible
 
 ### URL de la landing — TRÈS IMPORTANT
 - L'URL publique est : `https://landingland.vercel.app/{slug}`
