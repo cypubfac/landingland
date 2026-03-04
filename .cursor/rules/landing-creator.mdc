@@ -141,9 +141,11 @@ landingland/
 - **Toujours mettre à jour `vercel.json` quand on crée/supprime une landing**
 
 ## Partir de zéro — IMPORTANT
-- Chaque nouvelle landing DOIT être créée from scratch avec son propre CSS inline
+- Par défaut, chaque landing est de type **freestyle** (pas de `_type.css`, tout en CSS inline)
+- N'utiliser un autre type (ecommerce, saas, event...) QUE si l'utilisateur le demande explicitement
+- Chaque landing DOIT être créée from scratch avec son propre CSS inline unique
 - NE JAMAIS réutiliser ou copier le CSS/HTML d'une landing existante
-- NE JAMAIS s'inspirer du style visuel d'une autre landing sauf demande explicite de l'utilisateur
+- NE JAMAIS s'inspirer du style visuel d'une autre landing sauf demande explicite
 - Les exemples dans `free/` servent uniquement à comprendre la STRUCTURE et les conventions, pas le style
 - Chaque landing doit avoir un design unique adapté au produit/service décrit
 
