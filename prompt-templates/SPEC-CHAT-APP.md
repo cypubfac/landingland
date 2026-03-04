@@ -2,7 +2,7 @@
 
 ## Contexte
 
-On a un repo GitHub (`brulure1/landingland`) déployé sur Vercel qui contient des landing pages statiques HTML/CSS.
+On a un repo GitHub (`cypubfac/landingland`) déployé sur Vercel qui contient des landing pages statiques HTML/CSS.
 Ce repo est piloté par l'API **Cursor Cloud Agents** : on envoie un prompt, l'agent génère le code, commit et push.
 
 On veut maintenant créer une **app de chat séparée** qui sert d'interface utilisateur pour piloter la création de landings via cette API. Les utilisateurs n'ont aucune connaissance technique.
@@ -56,7 +56,7 @@ Content-Type: application/json
     "images": [<optionnel, base64, max 5>]
   },
   "source": {
-    "repository": "https://github.com/brulure1/landingland",
+    "repository": "https://github.com/cypubfac/landingland",
     "ref": "main"
   },
   "target": {
@@ -152,7 +152,7 @@ Pour les **follow-ups**, envoyer UNIQUEMENT le message brut (pas le template).
 
 ```
 CURSOR_API_KEY=key_xxxxxxxxxxxxxxxxxxxxxxxxxx
-GITHUB_REPO=https://github.com/brulure1/landingland
+GITHUB_REPO=https://github.com/cypubfac/landingland
 LANDINGS_BASE_URL=https://landingland.vercel.app
 ```
 
@@ -171,7 +171,7 @@ API routes (backend, même app)
     ↓ GET /v0/agents/{id} (polling) ou webhook
 Cursor Cloud Agent
     ↓
-Git push sur brulure1/landingland (branche main)
+Git push sur cypubfac/landingland (branche main)
     ↓
 Vercel auto-deploy
     ↓
