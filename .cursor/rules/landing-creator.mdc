@@ -44,6 +44,21 @@ landingland/
 - **INTERDICTION** de modifier le contenu de `/landings/free/` (lecture seule)
 - Un utilisateur peut consulter `/landings/free/` comme référence
 
+### Règles par BU (`_bu.md`)
+- Chaque BU a un fichier `/landings/{bu}/_bu.md` contenant ses règles spécifiques
+- **TOUJOURS lire `_bu.md` AVANT de créer une landing** dans cette BU
+- Les règles de `_bu.md` s'ajoutent aux règles globales (elles ne les remplacent pas)
+- Si `_bu.md` est vide → aucune contrainte spécifique, suivre uniquement les règles globales
+- Exemples de règles BU : couleurs interdites, langue, ton, marges, police, liens obligatoires...
+
+### Mise à jour des règles BU — UNIQUEMENT sur demande explicite
+- Modifier `_bu.md` UNIQUEMENT quand l'utilisateur fait une demande EXPLICITE et GÉNÉRALE
+  - Exemples valides : "je ne veux jamais de orange", "toutes mes landings doivent être en anglais"
+  - Exemples NON valides : "change la couleur de cette landing" (ça c'est un changement ponctuel)
+- En cas de doute, DEMANDER CONFIRMATION à l'utilisateur avant de modifier `_bu.md`
+- Modifier `_bu.md` ne modifie PAS les landings déjà créées (ça s'applique aux futures uniquement)
+- NE JAMAIS modifier le `_bu.md` d'une autre BU
+
 ### Types de landing
 - Chaque type a un fichier `_type.css` qui définit ses règles CSS spécifiques
 - La landing DOIT importer le CSS du type via chemin ABSOLU : `<link rel="stylesheet" href="/landings/{bu}/{type}/_type.css">`
@@ -54,7 +69,8 @@ landingland/
 
 ### Création d'une landing (checklist)
 1. Identifier la BU de l'utilisateur
-2. Identifier le type demandé (ou freestyle par défaut)
+2. **Lire `/landings/{bu}/_bu.md`** et appliquer ses règles
+3. Identifier le type demandé (ou freestyle par défaut)
 3. Vérifier que le slug est unique (pas déjà dans vercel.json)
 4. Créer `/landings/{bu}/{type}/{slug}/index.html`
 5. **Ajouter le rewrite dans `vercel.json`**
