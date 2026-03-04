@@ -16,6 +16,7 @@
     { "source": "/portfolio-minimal", "destination": "/landings/free/freestyle/portfolio-minimal/index.html" },
     { "source": "/cacao", "destination": "/landings/TEST/ecommerce/cacao/index.html" },
     { "source": "/argile", "destination": "/landings/TEST/freestyle/argile/index.html" },
-    { "source": "/cafe-matin", "destination": "/landings/TEST/freestyle/cafe-matin/index.html" }
+    { "source": "/cafe-matin", "destination": "/landings/TEST/freestyle/cafe-matin/index.html" },
+    { "source": "/fourchette", "destination": "/landings/PURST/freestyle/fourchette/index.html" }
   ]
 }
