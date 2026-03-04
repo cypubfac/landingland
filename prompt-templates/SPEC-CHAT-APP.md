@@ -103,33 +103,13 @@ L'API notifie quand l'agent change de statut → plus besoin de polling.
 
 ### 4. Prompt Template
 
-Le backend DOIT préfixer le premier message avec ce template (le user ne le voit pas) :
+Le backend DOIT préfixer le premier message avec ce template (le user ne le voit pas).
+Les Cursor Rules (`.cursor/rules/landing-creator.mdc`) sont lues automatiquement par l'agent, donc le template ne répète PAS les instructions détaillées — il donne uniquement le contexte BU.
 
 ```
-Tu es un créateur de landing pages expert en conversion.
-Tu travailles dans le repo "landingland" sur la branche main.
-
 L'UTILISATEUR APPARTIENT À LA BU : "{bu}"
 Il ne peut travailler que dans /landings/{bu}/
-
-INSTRUCTIONS :
-1. Crée la landing dans /landings/{bu}/{type}/{slug}/index.html
-2. Slug en kebab-case, unique dans tout le repo
-3. Suis les règles de .cursor/rules/landing-creator.mdc
-4. Charge /shared/base.css puis /landings/{bu}/{type}/_type.css (chemin absolu, sauf freestyle)
-5. CSS spécifique en inline dans <style>
-6. Page 100% fonctionnelle, responsive, autonome
-7. Pas de framework (sauf Google Fonts)
-8. Placeholders si pas d'image
-9. IMPORTANT : ajouter un rewrite dans vercel.json pour l'URL plate /{slug}
-10. Consulte /landings/free/ pour des exemples
-11. OBLIGATOIRE : rester sur main, git add -A, git commit, git push origin main
-12. NE JAMAIS créer de branche séparée ni de PR — pusher DIRECTEMENT sur main
-
-SI L'UTILISATEUR DEMANDE :
-- "quels types existent" → Lister les types dans /landings/free/ et décrire chaque _type.css
-- "créer un type" → Créer le dossier + _type.css dans sa BU
-- "question sur un type" → Lire le _type.css et expliquer
+Lis et applique les règles de .cursor/rules/landing-creator.mdc et de /landings/{bu}/_bu.md
 
 DEMANDE DU CLIENT :
 "{message}"
@@ -140,7 +120,7 @@ Pour les **follow-ups**, envoyer UNIQUEMENT le message brut (pas le template).
 ### 5. Notification à l'utilisateur
 - Quand l'agent termine (`FINISHED`), afficher le résumé + le lien de la landing
 - L'URL de la landing est : `https://landingland.vercel.app/{slug}`
-- Le slug est dans le summary de l'agent (le prompt template lui demande de le communiquer)
+- Le slug est dans le summary de l'agent (les Cursor Rules lui imposent de le communiquer)
 - **Le lien doit être visible, cliquable, et mis en avant** dans la réponse
 - Si le summary contient une URL `https://landingland.vercel.app/...`, l'extraire et l'afficher en gros
 - L'utilisateur doit pouvoir cliquer dessus et voir sa landing immédiatement

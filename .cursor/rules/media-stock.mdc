@@ -1,0 +1,60 @@
+---
+description: API de médias stock (images et vidéos) pour les landing pages
+globs: landings/**/*.html
+alwaysApply: false
+---
+
+# API Médias Stock
+
+## Endpoint
+
+```
+POST https://pubfac.app.n8n.cloud/webhook/cefdd6e5-9ee0-485d-9b24-9941609b7e35
+Content-Type: application/json
+```
+
+## Paramètres
+
+| Param | Valeurs | Description |
+|-------|---------|-------------|
+| `query` | mots-clés courts séparés par virgule | Ex: `"coffee, beans, dark"` |
+| `format` | `16:9` ou `9:16` | Orientation du média |
+| `media` | `image` ou `video` | Type de média |
+
+## Exemple d'appel
+
+```bash
+curl -X POST "https://pubfac.app.n8n.cloud/webhook/cefdd6e5-9ee0-485d-9b24-9941609b7e35" \
+  -H "Content-Type: application/json" \
+  -d '{"query":"coffee, beans","format":"16:9","media":"image"}'
+```
+
+## Format de réponse
+
+Tableau JSON avec un objet contenant les résultats par source (Pexels, Pixabay, etc.) :
+
+```json
+[
+  {
+    "Pexels": [
+      { "imageURL": "https://...", "context": "description", "type": "image" }
+    ],
+    "Pixabay": [
+      { "imageURL": "https://...", "context": "description", "type": "image" }
+    ]
+  }
+]
+```
+
+Pour les vidéos, le champ est `videoURL` au lieu de `imageURL`, avec un champ `duration` (en secondes).
+
+## Règles d'utilisation
+
+- **Utiliser cette API au lieu de `placehold.co`** pour toute landing (sauf si l'utilisateur fournit ses propres images)
+- Choisir des mots-clés pertinents par rapport au contenu de la section
+- Privilégier `format: "16:9"` pour les héros et sections larges, `"9:16"` pour les visuels portrait
+- Privilégier `media: "image"` sauf si l'utilisateur demande de la vidéo
+- Prendre le **premier résultat pertinent** (vérifier le `context` pour la cohérence)
+- Si aucun résultat pertinent → fallback sur `https://placehold.co/800x400`
+- Faire **un appel par visuel nécessaire** (pas un seul appel pour toute la page)
+- Conserver `alt`, `width`, `height`, `loading="lazy"` sur chaque image
