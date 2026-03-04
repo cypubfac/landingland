@@ -13,6 +13,7 @@
     { "source": "/sac-anti-vol", "destination": "/landings/free/ecommerce/sac-anti-vol/index.html" },
     { "source": "/task-flow", "destination": "/landings/free/saas/task-flow/index.html" },
     { "source": "/tech-summit-2025", "destination": "/landings/free/event/tech-summit-2025/index.html" },
-    { "source": "/portfolio-minimal", "destination": "/landings/free/freestyle/portfolio-minimal/index.html" }
+    { "source": "/portfolio-minimal", "destination": "/landings/free/freestyle/portfolio-minimal/index.html" },
+    { "source": "/cacao", "destination": "/landings/TEST/freestyle/cacao/index.html" }
   ]
 }

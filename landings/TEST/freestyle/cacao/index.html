@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cacao Premium | Saveur Authentique</title>
+  <meta name="description" content="Découvrez notre cacao d'exception, issu des meilleures plantations. Goût intense et pur.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/shared/base.css">
+  <style>
+    :root {
+      --color-primary: #5D4037;
+      --color-primary-dark: #4E342E;
+      --color-accent: #D4A574;
+      --color-secondary: #3E2723;
+      --color-bg-alt: #FDF8F3;
+      --font-heading: 'Playfair Display', serif;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--color-bg-alt) 0%, #fff 100%);
+    }
+
+    .hero__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+      align-items: center;
+    }
+
+    .hero__title {
+      font-size: var(--text-4xl);
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero__subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-text-light);
+      margin-bottom: var(--space-xl);
+    }
+
+    .hero__img {
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .features {
+      text-align: center;
+    }
+
+    .features__title {
+      font-size: var(--text-3xl);
+      margin-bottom: var(--space-3xl);
+    }
+
+    .features__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-xl);
+    }
+
+    .feature {
+      padding: var(--space-xl);
+      background: #fff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    .feature__icon {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .feature__title {
+      font-size: var(--text-xl);
+      margin-bottom: var(--space-sm);
+      color: var(--color-secondary);
+    }
+
+    .cta {
+      text-align: center;
+      background: var(--color-secondary);
+      color: #fff;
+    }
+
+    .cta__title {
+      font-size: var(--text-3xl);
+      color: #fff;
+      margin-bottom: var(--space-lg);
+    }
+
+    .cta .btn--primary {
+      background: var(--color-accent);
+      color: var(--color-secondary);
+    }
+
+    .cta .btn--primary:hover {
+      background: #C49660;
+    }
+
+    @media (max-width: 768px) {
+      .hero__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero__img {
+        order: -1;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <div>
+            <h1 class="hero__title heading">Cacao <span class="text-gradient">Premium</span></h1>
+            <p class="hero__subtitle">Découvrez l'intensité d'un cacao d'exception, récolté à la main dans les meilleures plantations du monde.</p>
+            <a href="#commander" class="btn btn--primary btn--large">Commander maintenant</a>
+          </div>
+          <img src="https://placehold.co/600x500/5D4037/FDF8F3?text=Cacao+Premium" alt="Cacao Premium" class="hero__img" width="600" height="500">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section section--alt features">
+      <div class="container">
+        <h2 class="features__title heading">Pourquoi notre cacao ?</h2>
+        <div class="features__grid">
+          <div class="feature">
+            <div class="feature__icon">🌱</div>
+            <h3 class="feature__title">100% Naturel</h3>
+            <p>Sans additifs ni conservateurs. Juste du cacao pur.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">🤝</div>
+            <h3 class="feature__title">Commerce Équitable</h3>
+            <p>Partenariat direct avec les producteurs locaux.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">✨</div>
+            <h3 class="feature__title">Goût Intense</h3>
+            <p>Une saveur riche et profonde qui fait la différence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="commander" class="section cta">
+      <div class="container">
+        <h2 class="cta__title heading">Prêt à goûter l'excellence ?</h2>
+        <p style="margin-bottom: var(--space-xl); opacity: 0.9;">Livraison gratuite dès 30€ d'achat.</p>
+        <a href="#" class="btn btn--primary btn--large">Découvrir nos produits</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
