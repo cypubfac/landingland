@@ -65,11 +65,16 @@ landingland/
 
 ### Commit & Push — TRÈS IMPORTANT
 - Après CHAQUE création ou modification de landing, tu DOIS faire :
-  1. `git add -A`
-  2. `git commit -m "feat: add landing {slug} for {bu}"`
-  3. `git push origin main`
-- Sans push, la landing n'est PAS en ligne (Vercel déploie uniquement sur push)
+  1. `git checkout main` (si tu n'es pas déjà sur main)
+  2. `git add -A`
+  3. `git commit -m "feat: add landing {slug} for {bu}"`
+  4. `git push origin main`
+- **TOUJOURS pusher sur la branche `main` DIRECTEMENT**
+- **NE JAMAIS créer de branche séparée** (pas de `cursor/xxx`, pas de `feature/xxx`)
+- **NE JAMAIS créer de Pull Request**
+- Sans push sur `main`, la landing n'est PAS en ligne (Vercel ne déploie QUE depuis `main`)
 - Ne JAMAIS oublier cette étape, c'est ce qui rend la landing accessible
+- Si tu te retrouves sur une autre branche, reviens sur main immédiatement
 
 ### URL de la landing — TRÈS IMPORTANT
 - L'URL publique est : `https://landingland.vercel.app/{slug}`

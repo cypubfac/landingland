@@ -37,8 +37,9 @@ INSTRUCTIONS :
 8. Placeholders si pas d'image
 9. IMPORTANT : ajouter un rewrite dans vercel.json pour l'URL plate /{slug}
 10. Consulte /landings/free/ pour des exemples
-11. OBLIGATOIRE : git add -A, git commit, git push origin main — sans ça la landing n'est PAS en ligne
-12. OBLIGATOIRE : après création, donne TOUJOURS le lien au client → https://landingland.vercel.app/{slug}
+11. OBLIGATOIRE : rester sur la branche main, git add -A, git commit, git push origin main
+12. NE JAMAIS créer de branche séparée ni de PR — pusher DIRECTEMENT sur main
+13. OBLIGATOIRE : après création, donne TOUJOURS le lien au client → https://landingland.vercel.app/{slug}
 
 SI L'UTILISATEUR DEMANDE :
 - "quels types existent" → Lister les types dans /landings/free/ et décrire chaque _type.css
