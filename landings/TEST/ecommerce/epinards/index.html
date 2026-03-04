@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Épinards Bio Premium | Fraîcheur & Santé</title>
+  <meta name="description" content="Découvrez nos épinards bio cultivés localement. Riches en fer et vitamines, livrés frais chez vous.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/shared/base.css">
+  <link rel="stylesheet" href="/landings/TEST/ecommerce/_type.css">
+  
+  <style>
+    :root {
+      --color-primary: #2d6a4f;
+      --color-primary-dark: #1b4332;
+      --color-primary-light: #40916c;
+      --ec-cta: #2d6a4f;
+      --ec-cta-hover: #1b4332;
+      --ec-badge-bg: #95d5b2;
+      --ec-badge-text: #1b4332;
+    }
+    
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text);
+    }
+    
+    .hero-bg {
+      background: linear-gradient(135deg, #d8f3dc 0%, #b7e4c7 100%);
+    }
+    
+    .section-title {
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+      color: var(--color-primary-dark);
+    }
+    
+    .hero-product__subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-text-light);
+    }
+    
+    .hero-product__title {
+      font-size: var(--text-3xl);
+      font-weight: 800;
+      color: var(--color-primary-dark);
+      line-height: 1.1;
+    }
+    
+    .hero-product__desc {
+      font-size: var(--text-base);
+      color: var(--color-text);
+      line-height: 1.7;
+    }
+    
+    .benefit__title {
+      font-weight: 700;
+      color: var(--color-primary-dark);
+    }
+    
+    .benefit__desc {
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+    }
+    
+    .review__author {
+      font-weight: 600;
+      margin-top: var(--space-md);
+      color: var(--color-primary-dark);
+    }
+    
+    .review__text {
+      font-style: italic;
+      color: var(--color-text);
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+      color: #fff;
+      text-align: center;
+    }
+    
+    .cta-section .section-title {
+      color: #fff;
+    }
+    
+    .cta-section p {
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-xl);
+      opacity: 0.9;
+    }
+    
+    .btn--cta-light {
+      background: #fff;
+      color: var(--color-primary-dark);
+      padding: var(--space-lg) var(--space-2xl);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      border: none;
+      border-radius: var(--radius-lg);
+      cursor: pointer;
+      transition: all var(--transition-base);
+      display: inline-block;
+    }
+    
+    .btn--cta-light:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    footer {
+      text-align: center;
+      padding: var(--space-xl);
+      background: var(--color-bg-alt);
+      color: var(--color-text-light);
+      font-size: var(--text-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Urgence Banner -->
+  <div class="urgency-banner">
+    🥬 Livraison GRATUITE pour toute commande avant dimanche !
+  </div>
+
+  <!-- Hero -->
+  <section class="hero-bg">
+    <div class="container">
+      <div class="hero-product">
+        <img 
+          src="https://placehold.co/600x600/2d6a4f/ffffff?text=Épinards+Bio" 
+          alt="Épinards bio frais" 
+          class="hero-product__image"
+          width="600" 
+          height="600"
+        >
+        <div class="hero-product__info">
+          <span class="hero-product__subtitle">🌱 Agriculture Biologique Certifiée</span>
+          <h1 class="hero-product__title">Épinards Bio Premium</h1>
+          <p class="hero-product__desc">
+            Des épinards frais, cultivés sans pesticides dans nos fermes locales. 
+            Riches en fer, vitamines et antioxydants pour booster votre santé au quotidien.
+          </p>
+          <div class="price">
+            <span class="price__current">4,90€</span>
+            <span class="price__old">6,90€</span>
+            <span class="price__badge">-29%</span>
+          </div>
+          <p style="font-size: var(--text-sm); color: var(--color-text-light);">Botte de 500g • Livraison 24h</p>
+          <a href="#commander" class="btn--buy">🛒 Commander maintenant</a>
+          <div class="guarantee">
+            <span>✓</span>
+            <span>Satisfait ou remboursé sous 7 jours</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bénéfices -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Pourquoi choisir nos épinards ?</h2>
+      <div class="benefits">
+        <div class="benefit">
+          <span class="benefit__icon">🌿</span>
+          <span class="benefit__title">100% Bio</span>
+          <span class="benefit__desc">Certifié AB, sans pesticides ni engrais chimiques</span>
+        </div>
+        <div class="benefit">
+          <span class="benefit__icon">🚚</span>
+          <span class="benefit__title">Ultra-frais</span>
+          <span class="benefit__desc">Récolté le matin, livré le lendemain</span>
+        </div>
+        <div class="benefit">
+          <span class="benefit__icon">💪</span>
+          <span class="benefit__title">Riche en fer</span>
+          <span class="benefit__desc">Booste votre énergie et renforce l'immunité</span>
+        </div>
+        <div class="benefit">
+          <span class="benefit__icon">🇫🇷</span>
+          <span class="benefit__title">Local</span>
+          <span class="benefit__desc">Cultivé en France, circuit court garanti</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avis clients -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section-title">Ce qu'en disent nos clients</h2>
+      <div class="reviews">
+        <div class="review">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"Des épinards d'une fraîcheur incomparable ! Mes enfants adorent et en redemandent."</p>
+          <p class="review__author">— Marie L.</p>
+        </div>
+        <div class="review">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"Enfin des légumes qui ont du goût. La qualité bio se sent vraiment."</p>
+          <p class="review__author">— Thomas D.</p>
+        </div>
+        <div class="review">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"Livraison rapide, produit impeccable. Je recommande les yeux fermés !"</p>
+          <p class="review__author">— Sophie M.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container container--narrow">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <details class="faq-item">
+        <summary>Comment sont cultivés vos épinards ?</summary>
+        <p class="faq-item__answer">
+          Nos épinards sont cultivés en plein champ selon les normes de l'agriculture biologique. 
+          Aucun pesticide ni engrais chimique n'est utilisé. Nous privilégions les méthodes naturelles 
+          comme le compost et la rotation des cultures.
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary>Quelle est la durée de conservation ?</summary>
+        <p class="faq-item__answer">
+          Conservés au réfrigérateur dans leur emballage d'origine, nos épinards restent frais 
+          pendant 5 à 7 jours. Pour une conservation optimale, ne les lavez qu'au moment de les consommer.
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary>Livrez-vous partout en France ?</summary>
+        <p class="faq-item__answer">
+          Oui ! Nous livrons dans toute la France métropolitaine. La livraison est effectuée 
+          sous 24 à 48h en véhicule réfrigéré pour garantir la fraîcheur.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section id="commander" class="section cta-section">
+    <div class="container">
+      <h2 class="section-title">Prêt à manger sainement ?</h2>
+      <p>Commandez vos épinards bio dès maintenant et profitez de la livraison gratuite !</p>
+      <a href="#" class="btn--cta-light">🥬 Je commande mes épinards</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Épinards Bio Premium — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    // Animation fade-in au scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
