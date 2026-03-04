@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cacao Premium Grand Cru | 100% Pur Origine Pérou</title>
+  <meta name="description" content="Découvrez notre cacao grand cru d'exception, récolté à la main au Pérou. 100% pur, bio et équitable. Saveur intense et arômes complexes.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/shared/base.css">
+  <link rel="stylesheet" href="/landings/TEST/ecommerce/_type.css">
+  
+  <style>
+    :root {
+      --color-primary: #5D4037;
+      --color-primary-dark: #3E2723;
+      --color-primary-light: #8D6E63;
+      --color-accent: #D4A574;
+      --color-secondary: #2C1810;
+      --ec-cta: #8B4513;
+      --ec-cta-hover: #5D2E0C;
+      --ec-price: #2C1810;
+      --ec-badge-bg: #D4A574;
+      --ec-badge-text: #2C1810;
+      --font-heading: 'Playfair Display', serif;
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      background: var(--color-bg);
+    }
+
+    .header {
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .header__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--color-secondary);
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #FDF8F3 0%, #F5EDE4 100%);
+      padding: var(--space-2xl) 0 var(--space-4xl);
+    }
+
+    .hero-product__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: var(--color-secondary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .hero-product__subtitle {
+      color: var(--color-primary);
+      font-size: var(--text-lg);
+      font-weight: 500;
+      margin-bottom: var(--space-md);
+    }
+
+    .hero-product__desc {
+      color: var(--color-text-light);
+      font-size: var(--text-base);
+      line-height: 1.7;
+      margin-bottom: var(--space-lg);
+    }
+
+    .features-mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .feature-mini {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+    }
+
+    .feature-mini svg {
+      width: 18px;
+      height: 18px;
+      color: var(--color-primary);
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      color: var(--color-secondary);
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .benefits-section {
+      background: #fff;
+      padding: var(--space-4xl) 0;
+    }
+
+    .benefit__icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-md);
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    .benefit__title {
+      font-weight: 600;
+      color: var(--color-secondary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .benefit__text {
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+    }
+
+    .details-section {
+      background: var(--color-bg-alt);
+      padding: var(--space-4xl) 0;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-2xl);
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .details-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .details-image {
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .details-content h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      color: var(--color-secondary);
+      margin-bottom: var(--space-md);
+    }
+
+    .details-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .details-item {
+      display: flex;
+      gap: var(--space-md);
+      align-items: flex-start;
+    }
+
+    .details-item__icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      color: var(--color-primary);
+    }
+
+    .reviews-section {
+      padding: var(--space-4xl) 0;
+    }
+
+    .review__author {
+      font-weight: 600;
+      margin-top: var(--space-md);
+    }
+
+    .review__text {
+      font-style: italic;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+
+    .faq-section {
+      background: var(--color-bg-alt);
+      padding: var(--space-4xl) 0;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-dark) 100%);
+      padding: var(--space-4xl) 0;
+      text-align: center;
+      color: #fff;
+    }
+
+    .cta-section .section-title {
+      color: #fff;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin: 0 auto var(--space-xl);
+    }
+
+    .btn--buy-light {
+      background: var(--ec-badge-bg);
+      color: var(--color-secondary);
+      padding: var(--space-lg) var(--space-2xl);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      border: none;
+      border-radius: var(--radius-lg);
+      cursor: pointer;
+      transition: all var(--transition-base);
+      display: inline-block;
+    }
+
+    .btn--buy-light:hover {
+      background: #E8C49A;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .footer {
+      background: var(--color-secondary);
+      color: rgba(255,255,255,0.7);
+      padding: var(--space-xl) 0;
+      text-align: center;
+      font-size: var(--text-sm);
+    }
+
+    .footer a {
+      color: var(--ec-badge-bg);
+    }
+  </style>
+</head>
+<body>
+  <!-- Bannière urgence -->
+  <div class="urgency-banner">
+    🎁 Livraison offerte dès 39€ — Stock limité : dernières récoltes disponibles !
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">Cacao Grand Cru</div>
+      <a href="#acheter" class="btn btn--primary">Commander</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Produit -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-product">
+          <img 
+            src="https://placehold.co/600x600/5D4037/FFFFFF?text=Cacao+Premium" 
+            alt="Sachet de cacao premium grand cru du Pérou" 
+            class="hero-product__image"
+            width="600"
+            height="600"
+          >
+          <div class="hero-product__info">
+            <span class="price__badge">Édition Limitée</span>
+            <h1 class="hero-product__title">Cacao Grand Cru du Pérou</h1>
+            <p class="hero-product__subtitle">100% Pur • Bio • Commerce Équitable</p>
+            <p class="hero-product__desc">
+              Un cacao d'exception issu des hauts plateaux péruviens. Notes de fruits rouges, 
+              légère acidité et finale persistante. Récolté à la main, fermenté naturellement, 
+              torréfié avec soin pour révéler tous ses arômes.
+            </p>
+            
+            <div class="features-mini">
+              <span class="feature-mini">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                Bio certifié
+              </span>
+              <span class="feature-mini">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                Sans additifs
+              </span>
+              <span class="feature-mini">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                Équitable
+              </span>
+            </div>
+
+            <div class="price" id="acheter">
+              <span class="price__current">24,90€</span>
+              <span class="price__old">34,90€</span>
+              <span class="price__badge">-29%</span>
+            </div>
+
+            <button class="btn--buy">
+              🛒 Ajouter au panier — 250g
+            </button>
+
+            <div class="guarantee">
+              <span>✅</span>
+              <div>
+                <strong>Satisfait ou remboursé 30 jours</strong><br>
+                <small>Si le goût ne vous convient pas, on vous rembourse.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bénéfices -->
+    <section class="benefits-section">
+      <div class="container">
+        <h2 class="section-title">Pourquoi choisir notre cacao ?</h2>
+        <div class="benefits">
+          <div class="benefit">
+            <div class="benefit__icon">🌱</div>
+            <h3 class="benefit__title">100% Origine Unique</h3>
+            <p class="benefit__text">Traçabilité totale, de la fève à votre tasse.</p>
+          </div>
+          <div class="benefit">
+            <div class="benefit__icon">🏆</div>
+            <h3 class="benefit__title">Grand Cru Certifié</h3>
+            <p class="benefit__text">Sélection des meilleures fèves, score 87+.</p>
+          </div>
+          <div class="benefit">
+            <div class="benefit__icon">🤝</div>
+            <h3 class="benefit__title">Commerce Équitable</h3>
+            <p class="benefit__text">Rémunération juste pour les producteurs.</p>
+          </div>
+          <div class="benefit">
+            <div class="benefit__icon">🍫</div>
+            <h3 class="benefit__title">Goût Incomparable</h3>
+            <p class="benefit__text">Torréfaction artisanale pour des arômes riches.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Détails produit -->
+    <section class="details-section">
+      <div class="container">
+        <div class="details-grid">
+          <img 
+            src="https://placehold.co/600x400/3E2723/FFFFFF?text=Fèves+de+Cacao" 
+            alt="Fèves de cacao criollo du Pérou" 
+            class="details-image"
+            width="600"
+            height="400"
+            loading="lazy"
+          >
+          <div class="details-content">
+            <h3>Un savoir-faire d'exception</h3>
+            <div class="details-list">
+              <div class="details-item">
+                <svg class="details-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <div><strong>Variété Criollo</strong> — La plus rare et la plus aromatique des variétés de cacao.</div>
+              </div>
+              <div class="details-item">
+                <svg class="details-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <div><strong>Fermentation 6 jours</strong> — Développement optimal des précurseurs d'arômes.</div>
+              </div>
+              <div class="details-item">
+                <svg class="details-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <div><strong>Torréfaction douce</strong> — Préservation des notes fruitées et florales.</div>
+              </div>
+              <div class="details-item">
+                <svg class="details-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <div><strong>Broyage sur pierre</strong> — Texture veloutée et homogène.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avis clients -->
+    <section class="reviews-section">
+      <div class="container">
+        <h2 class="section-title">Ce qu'en disent nos clients</h2>
+        <div class="reviews">
+          <div class="review">
+            <div class="review__stars">★★★★★</div>
+            <p class="review__text">"Un cacao extraordinaire ! Des arômes que je n'avais jamais goûtés. Mon chocolat chaud du matin est devenu un moment de pur bonheur."</p>
+            <p class="review__author">— Marie L., Paris</p>
+          </div>
+          <div class="review">
+            <div class="review__stars">★★★★★</div>
+            <p class="review__text">"En tant que pâtissier amateur, je cherchais un cacao de qualité. Celui-ci dépasse toutes mes attentes. Mes gâteaux ont un goût incroyable."</p>
+            <p class="review__author">— Thomas B., Lyon</p>
+          </div>
+          <div class="review">
+            <div class="review__stars">★★★★★</div>
+            <p class="review__text">"Je suis conquise par la traçabilité et l'éthique. Savoir que les producteurs sont bien payés rend ce cacao encore meilleur !"</p>
+            <p class="review__author">— Sophie M., Bordeaux</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container container--narrow">
+        <h2 class="section-title">Questions fréquentes</h2>
+        
+        <details class="faq-item">
+          <summary>Comment utiliser ce cacao ?</summary>
+          <div class="faq-item__answer">
+            Notre cacao s'utilise comme un cacao classique : chocolat chaud (2 cuillères par tasse), 
+            pâtisserie, smoothies, ou saupoudré sur vos desserts. Sa richesse aromatique permet 
+            d'en utiliser moins pour un goût plus intense.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Quelle est la différence avec un cacao classique ?</summary>
+          <div class="faq-item__answer">
+            Notre cacao Grand Cru provient d'une variété rare (Criollo), cultivée en altitude au Pérou. 
+            Contrairement aux cacaos industriels (souvent du Forastero mélangé), il offre des arômes 
+            complexes de fruits rouges, une légère acidité et aucune amertume excessive.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Le cacao est-il vraiment bio ?</summary>
+          <div class="faq-item__answer">
+            Oui, notre cacao est certifié Agriculture Biologique (AB) et Ecocert. Les plantations 
+            n'utilisent aucun pesticide ni engrais chimique. Les fèves sont également certifiées 
+            commerce équitable (Fairtrade).
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Combien de temps se conserve-t-il ?</summary>
+          <div class="faq-item__answer">
+            Conservé au sec et à l'abri de la lumière, notre cacao se garde 18 mois. Une fois ouvert, 
+            nous recommandons de le consommer dans les 6 mois pour profiter de tous ses arômes.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="section-title">Prêt à découvrir le vrai goût du cacao ?</h2>
+        <p>
+          Offrez-vous un moment d'exception avec notre cacao grand cru. 
+          Livraison offerte dès 39€, satisfait ou remboursé 30 jours.
+        </p>
+        <a href="#acheter" class="btn--buy-light">
+          Commander maintenant — 24,90€
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Cacao Grand Cru — <a href="#">Mentions légales</a> • <a href="#">CGV</a> • <a href="#">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Animation fade-in au scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
