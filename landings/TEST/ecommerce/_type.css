@@ -1,0 +1,198 @@
+/*
+ * TYPE : ecommerce
+ * DESCRIPTION : Landing page orientée vente de produit physique ou digital.
+ *               Focus sur la conversion : hero produit, prix, CTA achat, urgence.
+ *
+ * SECTIONS ATTENDUES :
+ *   1. Hero produit (image large, titre, prix, CTA "Acheter")
+ *   2. Bénéfices clés (3-4 icônes + texte court)
+ *   3. Galerie / Détails produit
+ *   4. Avis clients (étoiles + témoignages)
+ *   5. FAQ (accordéon)
+ *   6. CTA final avec garantie / urgence
+ *
+ * PALETTE : fond blanc, accents chauds, CTA très visible
+ */
+
+/* --- Palette ecommerce --- */
+:root {
+  --ec-cta: #e63946;
+  --ec-cta-hover: #c1121f;
+  --ec-price: #1d3557;
+  --ec-badge-bg: #ffd60a;
+  --ec-badge-text: #1d3557;
+  --ec-guarantee: #2a9d8f;
+}
+
+/* --- Hero produit --- */
+.hero-product {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  padding: var(--space-2xl) 0;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .hero-product {
+    grid-template-columns: 1fr 1fr;
+    padding: var(--space-4xl) 0;
+  }
+}
+
+.hero-product__image {
+  border-radius: var(--radius-lg);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.hero-product__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* --- Prix --- */
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.price__current {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--ec-price);
+}
+
+.price__old {
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+  text-decoration: line-through;
+}
+
+.price__badge {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  background: var(--ec-badge-bg);
+  color: var(--ec-badge-text);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-full);
+}
+
+/* --- CTA ecommerce --- */
+.btn--buy {
+  background: var(--ec-cta);
+  color: #fff;
+  padding: var(--space-lg) var(--space-2xl);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: center;
+  width: 100%;
+}
+
+.btn--buy:hover {
+  background: var(--ec-cta-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* --- Bénéfices --- */
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
+  text-align: center;
+  padding: var(--space-2xl) 0;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.benefit__icon {
+  font-size: 2rem;
+}
+
+/* --- Avis clients --- */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.review {
+  padding: var(--space-xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+}
+
+.review__stars {
+  color: var(--ec-badge-bg);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-sm);
+}
+
+/* --- FAQ Accordéon --- */
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item summary {
+  padding: var(--space-lg) 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--text-lg);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-size: var(--text-xl);
+  transition: transform var(--transition-base);
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item__answer {
+  padding: 0 0 var(--space-lg) 0;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* --- Garantie / Urgence --- */
+.guarantee {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: rgba(42, 157, 143, 0.08);
+  border-left: 4px solid var(--ec-guarantee);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-md);
+}
+
+.urgency-banner {
+  text-align: center;
+  padding: var(--space-md);
+  background: var(--ec-cta);
+  color: #fff;
+  font-weight: 600;
+  font-size: var(--text-base);
+}

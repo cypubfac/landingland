@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cacao Premium | L'excellence du chocolat brut</title>
+  <meta name="description" content="Découvrez notre cacao d'exception, issu de fèves sélectionnées. Goût intense, 100% naturel.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/shared/base.css">
+  <link rel="stylesheet" href="/landings/TEST/ecommerce/_type.css">
+  
+  <style>
+    :root {
+      --color-primary: #5D4037;
+      --color-primary-dark: #3E2723;
+      --color-accent: #D4A574;
+      --ec-cta: #8D6E63;
+      --ec-cta-hover: #5D4037;
+      --ec-price: #3E2723;
+      --ec-badge-bg: #D4A574;
+      --ec-badge-text: #3E2723;
+      --font-heading: 'Playfair Display', serif;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text);
+    }
+
+    /* Hero custom */
+    .hero {
+      background: linear-gradient(135deg, #FDF8F3 0%, #F5EBE0 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 60%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(212,165,116,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-product__image {
+      box-shadow: var(--shadow-xl);
+      border-radius: var(--radius-xl);
+    }
+
+    .hero-product__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      color: var(--color-primary-dark);
+      line-height: 1.1;
+    }
+
+    .hero-product__subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-text-light);
+      max-width: 400px;
+    }
+
+    /* Section bénéfices */
+    .section-benefits {
+      background: #fff;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+      color: var(--color-primary-dark);
+    }
+
+    .benefit {
+      padding: var(--space-xl);
+      background: #FDF8F3;
+      border-radius: var(--radius-lg);
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+
+    .benefit:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .benefit__icon {
+      width: 56px;
+      height: 56px;
+      background: var(--color-accent);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .benefit__title {
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      margin-bottom: var(--space-xs);
+    }
+
+    .benefit__text {
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+    }
+
+    /* CTA Final */
+    .cta-final {
+      background: linear-gradient(135deg, #3E2723 0%, #5D4037 100%);
+      color: #fff;
+      text-align: center;
+    }
+
+    .cta-final .section-title {
+      color: #fff;
+    }
+
+    .cta-final__text {
+      color: rgba(255,255,255,0.8);
+      max-width: 500px;
+      margin: 0 auto var(--space-xl);
+    }
+
+    .btn--cta-final {
+      background: var(--color-accent);
+      color: var(--color-primary-dark);
+      padding: var(--space-lg) var(--space-3xl);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      border: none;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: all var(--transition-base);
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn--cta-final:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* Footer minimal */
+    footer {
+      background: #1a1a1a;
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: var(--space-xl) 0;
+      font-size: var(--text-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero section">
+    <div class="container">
+      <div class="hero-product">
+        <img 
+          src="https://placehold.co/600x600/5D4037/F5EBE0?text=Cacao+Premium" 
+          alt="Poudre de cacao premium dans un bol artisanal" 
+          class="hero-product__image"
+          width="600" 
+          height="600"
+        >
+        <div class="hero-product__info">
+          <span class="price__badge">🌱 100% Bio</span>
+          <h1 class="hero-product__title">Cacao d'Exception</h1>
+          <p class="hero-product__subtitle">
+            Savourez l'intensité d'un cacao pur, issu des meilleures plantations. 
+            Un goût authentique pour les vrais amateurs.
+          </p>
+          <div class="price">
+            <span class="price__current">24,90 €</span>
+            <span class="price__old">34,90 €</span>
+            <span class="price__badge">-29%</span>
+          </div>
+          <button class="btn--buy">Commander maintenant</button>
+          <div class="guarantee">
+            <span>✓</span>
+            <span>Livraison offerte • Satisfait ou remboursé 30j</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BÉNÉFICES -->
+  <section class="section section-benefits">
+    <div class="container">
+      <h2 class="section-title">Pourquoi notre cacao ?</h2>
+      <div class="benefits">
+        <div class="benefit">
+          <div class="benefit__icon">🍫</div>
+          <h3 class="benefit__title">Goût intense</h3>
+          <p class="benefit__text">Fèves torréfiées lentement pour révéler tous les arômes.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit__icon">🌍</div>
+          <h3 class="benefit__title">Origine éthique</h3>
+          <p class="benefit__text">Partenariat direct avec des producteurs équitables.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit__icon">💪</div>
+          <h3 class="benefit__title">Riche en nutriments</h3>
+          <p class="benefit__text">Magnésium, fer et antioxydants naturels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section cta-final">
+    <div class="container container--narrow">
+      <h2 class="section-title">Prêt à goûter l'excellence ?</h2>
+      <p class="cta-final__text">
+        Offre limitée : profitez de -29% sur votre première commande.
+      </p>
+      <a href="#" class="btn--cta-final">Je commande mon cacao</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Cacao Premium — Tous droits réservés</p>
+    </div>
+  </footer>
+
+</body>
+</html>
