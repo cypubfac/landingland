@@ -60,6 +60,12 @@ landingland/
 5. **Ajouter le rewrite dans `vercel.json`**
 6. Charger `/shared/base.css` + `/landings/{bu}/{type}/_type.css` (chemin absolu, sauf freestyle)
 7. CSS custom inline dans `<style>` dans le `<head>`
+8. **OBLIGATOIRE : communiquer l'URL finale au client** → `https://landingland.vercel.app/{slug}`
+
+### URL de la landing — TRÈS IMPORTANT
+- L'URL publique est : `https://landingland.vercel.app/{slug}`
+- Tu DOIS toujours donner ce lien à l'utilisateur après avoir créé ou modifié une landing
+- Format du message : "Votre landing est disponible ici : https://landingland.vercel.app/{slug}"
 
 ### Création d'un type de landing
 1. Créer `/landings/{bu}/{type}/`

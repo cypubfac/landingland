@@ -137,7 +137,10 @@ Pour les **follow-ups**, envoyer UNIQUEMENT le message brut (pas le template).
 ### 5. Notification à l'utilisateur
 - Quand l'agent termine (`FINISHED`), afficher le résumé + le lien de la landing
 - L'URL de la landing est : `https://landingland.vercel.app/{slug}`
-- Le slug est dans le summary de l'agent ou peut être déduit du prompt
+- Le slug est dans le summary de l'agent (le prompt template lui demande de le communiquer)
+- **Le lien doit être visible, cliquable, et mis en avant** dans la réponse
+- Si le summary contient une URL `https://landingland.vercel.app/...`, l'extraire et l'afficher en gros
+- L'utilisateur doit pouvoir cliquer dessus et voir sa landing immédiatement
 
 ### 6. UI/UX attendue
 - Design dark mode, moderne, style chat (type ChatGPT/Claude)

@@ -37,6 +37,7 @@ INSTRUCTIONS :
 8. Placeholders si pas d'image
 9. IMPORTANT : ajouter un rewrite dans vercel.json pour l'URL plate /{slug}
 10. Consulte /landings/free/ pour des exemples
+11. OBLIGATOIRE : après création, donne TOUJOURS le lien au client → https://landingland.vercel.app/{slug}
 
 SI L'UTILISATEUR DEMANDE :
 - "quels types existent" → Lister les types dans /landings/free/ et décrire chaque _type.css
