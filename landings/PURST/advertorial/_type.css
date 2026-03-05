@@ -1,0 +1,359 @@
+/*
+ * TYPE : advertorial
+ * DESCRIPTION : Landing style "article journal" avec bandeau advertorial,
+ *               colonne principale + sidebar sticky, CTA et popup formulaire email.
+ *
+ * SECTIONS ATTENDUES :
+ *   1. Bandeau advertorial
+ *   2. Header logo type journal
+ *   3. Titre H1 accrocheur
+ *   4. Image principale article
+ *   5. Meta (auteur, date, temps lecture)
+ *   6. Contenu article (paragraphes, h3)
+ *   7. CTA principal (bouton + popup)
+ *   8. Sidebar (encadré + CTA secondaire)
+ *   9. Footer disclaimer
+ *   10. Modal formulaire email
+ *
+ * PALETTE : fond #f4f4f4, bleu #0056b3, rouge CTA #e74c3c, texte #333
+ */
+body.advertorial {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* --- Bandeau advertorial --- */
+.advertorial-banner {
+  background-color: #eee;
+  color: #666;
+  font-size: 11px;
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Header journal --- */
+.advertorial-header {
+  background: #fff;
+  padding: 15px 0;
+  border-bottom: 4px solid #0056b3;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.advertorial-logo {
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Container --- */
+.advertorial-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* --- Layout colonnes --- */
+.advertorial-content {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.advertorial-main {
+  flex: 2;
+}
+
+.advertorial-sidebar {
+  flex: 1;
+  position: sticky;
+  top: 20px;
+  min-width: 300px;
+}
+
+/* --- Sidebar box --- */
+.advertorial-sidebar-box {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.advertorial-sidebar-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #0056b3;
+  text-transform: uppercase;
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.advertorial-sidebar-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  display: block;
+}
+
+/* --- Boutons --- */
+.advertorial-btn-main {
+  display: inline-block;
+  background-color: #e74c3c;
+  color: white;
+  padding: 20px 35px;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.3s;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 500px;
+  cursor: pointer;
+  border: none;
+}
+
+.advertorial-btn-main:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+.advertorial-btn-sidebar {
+  display: block;
+  background-color: #e74c3c;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 20px 0;
+  transition: background 0.3s;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+}
+
+.advertorial-btn-sidebar:hover {
+  background-color: #c0392b;
+}
+
+/* --- Typo article --- */
+.advertorial h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 45px);
+  line-height: 1.2;
+  color: #111;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.advertorial-meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 30px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+}
+
+.advertorial-meta span {
+  margin-right: 15px;
+}
+
+.advertorial p {
+  margin-bottom: 22px;
+  font-size: clamp(18px, 2vw, 20px);
+  line-height: 1.7;
+}
+
+.advertorial-highlight-red {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.advertorial-big-stat {
+  font-size: 26px;
+  font-weight: bold;
+  background: #fff3cd;
+  padding: 2px 5px;
+}
+
+.advertorial-article-img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 0 auto 25px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+}
+
+.advertorial-article-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- CTA container --- */
+.advertorial-cta-box {
+  background-color: #f0f7ff;
+  border: 2px dashed #0056b3;
+  padding: 40px;
+  text-align: center;
+  margin: 30px 0;
+  border-radius: 8px;
+}
+
+.advertorial-sub-cta {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #666;
+}
+
+/* --- Modal --- */
+.advertorial-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.advertorial-modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: advertorial-fadeIn 0.3s ease-out;
+}
+
+@keyframes advertorial-fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.advertorial-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.advertorial-modal-close:hover {
+  color: #000;
+}
+
+.advertorial-form-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.advertorial-form-text {
+  flex: 1;
+}
+
+.advertorial-form-img {
+  flex: 1;
+  text-align: center;
+}
+
+.advertorial-form-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.advertorial-form-input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.advertorial-btn-submit {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 18px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.advertorial-btn-submit:hover {
+  background-color: #218838;
+}
+
+/* --- Footer --- */
+.advertorial-footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 13px;
+  color: #888;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.advertorial-disclaimer {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 30px;
+  background: #fff;
+  text-align: justify;
+  font-size: 14px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .advertorial-content {
+    flex-direction: column;
+  }
+  .advertorial-sidebar {
+    width: 100%;
+    order: 2;
+  }
+  .advertorial-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+  .advertorial-form-row {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
