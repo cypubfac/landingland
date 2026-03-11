@@ -1,0 +1,220 @@
+/*
+ * TYPE : listicle
+ * DESCRIPTION : Landing format liste numérotée (ex: "13 découvertes sur...").
+ *               Style éditorial épuré, sans bandeau advertorial ni sidebar.
+ *
+ * SECTIONS ATTENDUES :
+ *   1. Hero (titre + image)
+ *   2. Intro accrocheur
+ *   3. Liste numérotée (items 1 à N)
+ *   4. Transition vers la solution
+ *   5. CTA principal
+ *   6. Footer disclaimer
+ *
+ * PALETTE : fond #fafafa, texte #1a1a1a, accent #c2410c, CTA #2563eb
+ */
+body.listicle {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1a1a1a;
+  background-color: #fafafa;
+}
+
+.listicle-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 48px) 20px;
+}
+
+/* --- Hero --- */
+.listicle-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.listicle-hero h1 {
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.25;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.listicle-hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.listicle-hero-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Contenu --- */
+.listicle-content p {
+  font-size: clamp(17px, 2vw, 19px);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.listicle-content h3 {
+  font-size: clamp(20px, 2.5vw, 24px);
+  margin: 36px 0 20px;
+  color: #111;
+}
+
+/* --- Liste numérotée --- */
+.listicle-list {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0;
+}
+
+.listicle-list li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  border-left: 4px solid #c2410c;
+}
+
+.listicle-list-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: #c2410c;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.listicle-list-text {
+  flex: 1;
+  font-size: clamp(16px, 1.8vw, 18px);
+  line-height: 1.6;
+}
+
+/* --- CTA --- */
+.listicle-cta {
+  text-align: center;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  padding: 40px 30px;
+  border-radius: 12px;
+  margin: 40px 0;
+  border: 1px solid #93c5fd;
+}
+
+.listicle-cta p {
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+
+.listicle-btn {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  padding: 18px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.listicle-btn:hover {
+  background: #1d4ed8;
+}
+
+/* --- Footer --- */
+.listicle-footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 13px;
+  color: #888;
+}
+
+.listicle-disclaimer {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 13px;
+  color: #666;
+}
+
+/* --- Modal --- */
+.listicle-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.listicle-modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.listicle-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+}
+
+.listicle-form-input {
+  width: 100%;
+  padding: 16px;
+  margin: 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.listicle-btn-submit {
+  width: 100%;
+  background: #2563eb;
+  color: #fff;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.listicle-btn-submit:hover {
+  background: #1d4ed8;
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .listicle-list li {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

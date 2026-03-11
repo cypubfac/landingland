@@ -20,6 +20,6 @@
     { "source": "/fourchette", "destination": "/landings/PURST/freestyle/fourchette/index.html" },
     { "source": "/parasites-sante", "destination": "/landings/PURST/advertorial/parasites-sante/index.html" },
     { "source": "/solutions-sommeil", "destination": "/landings/PURST/advertorial/solutions-sommeil/index.html" },
-    { "source": "/cardiovasculaire", "destination": "/landings/PURST/advertorial/cardiovasculaire/index.html" }
+    { "source": "/cardiovasculaire", "destination": "/landings/PURST/listicle/cardiovasculaire/index.html" }
   ]
 }

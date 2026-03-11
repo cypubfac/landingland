@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>13 Découvertes Sur Les Maladies Cardiovasculaires</title>
+  <link rel="stylesheet" href="/shared/base.css">
+  <link rel="stylesheet" href="/landings/PURST/listicle/_type.css">
+</head>
+<body class="listicle">
+  <main class="listicle-container">
+    <div class="listicle-hero">
+      <h1>13 Découvertes Sur Les Maladies Cardiovasculaires Que Les Experts Sont En Train De Révéler</h1>
+      <div class="listicle-hero-img">
+        <img src="https://images.pexels.com/photos/35044386/pexels-photo-35044386.jpeg" alt="Santé cardiovasculaire" width="700" height="394" loading="eager">
+      </div>
+    </div>
+
+    <div class="listicle-content">
+      <p>Un chiffre <strong>alarmant</strong> circule dans les milieux médicaux… Les maladies cardiovasculaires restent la première cause de mortalité. Pourtant, des chercheurs ont identifié <strong>13 éléments clés</strong> qui pourraient changer la donne. Voici ce qu'ils ont découvert.</p>
+
+      <h3>Les 13 découvertes révélées</h3>
+      <ol class="listicle-list">
+        <li>
+          <span class="listicle-list-num">1</span>
+          <span class="listicle-list-text">L'alimentation joue un rôle bien plus important qu'on ne le pensait pour la santé du cœur.</span>
+        </li>
+        <li>
+          <span class="listicle-list-num">2</span>
+          <span class="listicle-list-text">Certains nutriments naturels soutiennent directement le système cardiovasculaire.</span>
+        </li>
+        <li>
+          <span class="listicle-list-num">3</span>
+          <span class="listicle-list-text">Le stress chronique impacte le cœur de manière insidieuse.</span>
+        </li>
+        <li>
+          <span class="listicle-list-num">4</span>
+          <span class="listicle-list-text">Le sommeil de qualité est essentiel pour la régulation cardiaque.</span>
+        </li>
+        <li>
+          <span class="listicle-list-num">5</span>
+          <span class="listicle-list-text">L'activité physique modérée fait des miracles sur la circulation.</span>
+        </li>
+        <li>
+          <span class="listicle-list-num">6</span>
+          <span class="listicle-list-text">L'hydratation influence la fluidité du sang.</span>
+        </li>
+        <li>
+          <span class="listicle-list-num">7</span>
+          <span class="listicle-list-text">Certains compléments naturels sont appuyés par des études sérieuses.</span>
+        </li>
+        <li>
+          <span class="listicle-list-num">8</span>
+          <span class="listicle-list-text">La gestion du poids réduit considérablement les risques.</span>
+        </li>
+        <li>
+          <span class="listicle-list-num">9</span>
+          <span class="listicle-list-text">Les antioxydants protègent les vaisseaux sanguins.</span>
+        </li>
+        <li>
+          <span class="listicle-list-num">10</span>
+          <span class="listicle-list-text">Les oméga-3 sont des alliés reconnus pour le cœur.</span>
+        </li>
+        <li>
+          <span class="listicle-list-num">11</span>
+          <span class="listicle-list-text">La vitamine K2 joue un rôle méconnu dans la santé cardiovasculaire.</span>
+        </li>
+        <li>
+          <span class="listicle-list-num">12</span>
+          <span class="listicle-list-text">Le magnésium soutient le muscle cardiaque.</span>
+        </li>
+        <li>
+          <span class="listicle-list-num">13</span>
+          <span class="listicle-list-text">Une approche globale combinant plusieurs de ces éléments fait la différence.</span>
+        </li>
+      </ol>
+
+      <h3>Une conférence unique pour tout découvrir</h3>
+      <p>Un expert a réuni toutes ces découvertes dans une conférence <strong>100% gratuite</strong>. Une occasion unique de comprendre comment protéger naturellement votre cœur avec des solutions accessibles et adaptées à votre quotidien.</p>
+
+      <div class="listicle-cta">
+        <p>Découvrez ces 13 secrets en visionnant la conférence gratuite.</p>
+        <button type="button" class="listicle-btn trigger-popup">Visionner la conférence »</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="listicle-footer">
+    <div class="listicle-disclaimer">
+      <p><strong>Important :</strong> Ce contenu est à titre informatif et promotionnel. Les résultats individuels peuvent varier. Consultez un professionnel de santé pour tout conseil médical.</p>
+    </div>
+  </footer>
+
+  <div id="ctaModal" class="listicle-modal">
+    <div class="listicle-modal-content">
+      <span class="listicle-modal-close" aria-label="Fermer">×</span>
+      <form method="GET" action="https://curiosity.pure-sante.info/clicklead/add">
+        <input type="hidden" name="sourceCode" value="PST773740001">
+        <p style="font-weight: 600; margin-bottom: 12px;">Entrez votre email pour accéder à la conférence gratuite.</p>
+        <input type="email" class="listicle-form-input" name="email" placeholder="Votre adresse email" required>
+        <input type="submit" class="listicle-btn-submit" value="Accéder à la conférence">
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var modal = document.getElementById('ctaModal');
+      var closeBtn = document.querySelector('.listicle-modal-close');
+      document.querySelectorAll('.trigger-popup').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          modal.style.display = 'flex';
+        });
+      });
+      closeBtn.onclick = function() { modal.style.display = 'none'; };
+      window.onclick = function(e) {
+        if (e.target === modal) modal.style.display = 'none';
+      };
+      var urlParams = new URLSearchParams(window.location.search);
+      var source = urlParams.get('source');
+      if (source) {
+        var input = document.querySelector('input[name="sourceCode"]');
+        if (input) input.value = source;
+      }
+    })();
+  </script>
+</body>
+</html>
