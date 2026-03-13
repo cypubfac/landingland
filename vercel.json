@@ -24,6 +24,7 @@
     { "source": "/cardiovasculaire", "destination": "/landings/PURST/listicle/cardiovasculaire/index.html" },
     { "source": "/saaspocalypse", "destination": "/landings/PURST/advertorial/saaspocalypse/index.html" },
     { "source": "/foie-medecine-chinoise", "destination": "/landings/PURST/advertorial/foie-medecine-chinoise/index.html" },
-    { "source": "/plantes-depression", "destination": "/landings/PURST/advert/advertorial/plantes-depression/index.html" }
+    { "source": "/plantes-depression", "destination": "/landings/PURST/advert/advertorial/plantes-depression/index.html" },
+    { "source": "/mind-machines", "destination": "/landings/PURST/advert/advertorial/mind-machines/index.html" }
   ]
 }
