@@ -381,6 +381,117 @@
       transform: none;
     }
 
+    .wm-apple-dossier {
+      background: linear-gradient(160deg, #fff5eb 0%, #fff 45%);
+      border: 2px solid var(--wm-gold);
+      border-radius: 24px;
+      padding: clamp(1.25rem, 4vw, 2rem);
+      margin: 2.5rem 0;
+    }
+
+    .wm-apple-dossier > h3 {
+      margin-top: 0;
+      color: #b45309;
+    }
+
+    .wm-apple-steps {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .wm-apple-step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: start;
+      background: #fff;
+      border-radius: 14px;
+      padding: 1rem 1.15rem;
+      box-shadow: 0 6px 20px rgba(180, 83, 9, 0.08);
+    }
+
+    .wm-apple-step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--wm-gold);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+
+    .wm-apple-step strong {
+      display: block;
+      color: var(--wm-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .wm-apple-step p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .wm-apple-family {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.75rem;
+      margin: 1.5rem 0 0;
+    }
+
+    .wm-apple-family span {
+      background: #fff;
+      border: 1px solid #f0d9c4;
+      border-radius: 10px;
+      padding: 0.65rem 0.85rem;
+      font-size: 0.9rem;
+      text-align: center;
+      font-weight: 600;
+      color: #7c4a03;
+    }
+
+    .wm-apple-alert {
+      background: #fff;
+      border-left: 5px solid var(--wm-gold);
+      padding: 1rem 1.15rem;
+      border-radius: 0 12px 12px 0;
+      margin: 1.5rem 0;
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    .wm-apple-kids {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .wm-apple-kids { grid-template-columns: 1fr 1fr; }
+    }
+
+    .wm-apple-kids li {
+      background: #fff;
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      list-style: none;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
+
+    .wm-apple-kids ul {
+      margin: 0;
+      padding: 0;
+      display: contents;
+    }
+
     @media (max-width: 480px) {
       .wm-gallery { grid-template-columns: 1fr 1fr; }
       .wm-gallery img:last-child { grid-column: span 2; }
@@ -413,7 +524,7 @@
     <div class="wm-meta-bar">
       <span>Par <strong>La rédaction PureSanté</strong></span>
       <span>Publié le <time id="article-date"></time></span>
-      <span>Lecture : <strong>6 min</strong></span>
+      <span>Lecture : <strong>9 min</strong></span>
     </div>
 
     <div class="wm-layout">
@@ -479,7 +590,88 @@
             </article>
           </div>
 
-          <p class="wm-reveal">Les pépins de pomme, poire ou le noyau d'abricot libèrent du cyanure lors de la mastication. Pour un adulte de 70&nbsp;kg, la dose létale théorique évoquée par Santé Magazine tourne autour de 200 pépins — soit près de 40 trognons bien croqués. Avaler par erreur quelques pépins en fin de dessert, chez un enfant comme chez un adulte, reste très loin de ce scénario.</p>
+          <section class="wm-apple-dossier wm-reveal" aria-labelledby="titre-pomme">
+            <h3 id="titre-pomme">Pépins de pomme : ce qu'il faut vraiment comprendre</h3>
+
+            <p>La peur vient souvent d'une phrase entendue au hasard : « les pépins de pomme, c'est du cyanure ». Ce n'est pas totalement faux — mais c'est très incomplet. Voici ce qui se passe réellement dans le trognon, et pourquoi la panique est presque toujours disproportionnée.</p>
+
+            <figure class="wm-figure" style="margin-top:1.5rem;">
+              <img src="https://images.pexels.com/photos/142498/pexels-photo-142498.jpeg" alt="Pomme rouge entière et demi-pomme montrant le cœur et les pépins" width="900" height="600" loading="lazy">
+              <figcaption>Le trognon concentre les pépins : c'est en les mâchant longuement que l'amygdaline peut libérer du cyanure — pas en les avalant entiers par mégarde.</figcaption>
+            </figure>
+
+            <p>La pomme appartient à la famille des <strong>Rosacées</strong>, tout comme la poire, la prune, la cerise ou l'abricot. Dans ces fruits, les pépins et noyaux contiennent de l'<strong>amygdaline</strong> : une molécule naturelle qui, une fois broyée par les dents et digérée, peut se transformer en cyanure d'hydrogène. C'est ce mécanisme qui alimente les articles alarmistes — et la confusion avec la pastèque, qui n'en contient pas.</p>
+
+            <div class="wm-apple-steps">
+              <div class="wm-apple-step">
+                <span class="wm-apple-step-num">1</span>
+                <div>
+                  <strong>Vous croquez le trognon</strong>
+                  <p>La paroi du pépin se fissure. L'amygdaline entre en contact avec les enzymes de la salive et de l'intestin.</p>
+                </div>
+              </div>
+              <div class="wm-apple-step">
+                <span class="wm-apple-step-num">2</span>
+                <div>
+                  <strong>Libération de cyanure</strong>
+                  <p>En quantité minuscule par pépin. Plus vous mâchez fort et longtemps, plus la dose potentielle augmente.</p>
+                </div>
+              </div>
+              <div class="wm-apple-step">
+                <span class="wm-apple-step-num">3</span>
+                <div>
+                  <strong>L'organisme élimine</strong>
+                  <p>Le foie et les reins traitent de petites quantités sans symptôme. Le danger apparaît surtout en consommation <em>massive et répétée</em>.</p>
+                </div>
+              </div>
+            </div>
+
+            <p>La diététicienne <strong>Stéphanie Drieu</strong>, citée par Marmiton et Santé Magazine, insiste sur ce point : la quantité présente dans un ou deux pépins « ne présente un danger qu'en cas de consommation excessive » — il faut parler de trognons croqués délibérément, régulièrement, et en grande quantité, pas d'un pépin avalé en fin de goûter.</p>
+
+            <div class="wm-stat-row" style="margin:1.5rem 0;">
+              <div class="wm-stat" style="border-color:var(--wm-gold);">
+                <div class="wm-stat-num" style="color:#b45309;">~200</div>
+                <div class="wm-stat-label">pépins de pomme pour une dose létale théorique (adulte 70&nbsp;kg)</div>
+              </div>
+              <div class="wm-stat" style="border-color:var(--wm-gold);">
+                <div class="wm-stat-num" style="color:#b45309;">~40</div>
+                <div class="wm-stat-label">trognons entiers, bien mâchés (ordre de grandeur cité par Santé Magazine)</div>
+              </div>
+              <div class="wm-stat" style="border-color:var(--wm-gold);">
+                <div class="wm-stat-num" style="color:#b45309;">1-2</div>
+                <div class="wm-stat-label">pépins avalés par erreur : très en dessous du seuil, adulte ou enfant</div>
+              </div>
+            </div>
+
+            <figure class="wm-figure">
+              <img src="https://images.pexels.com/photos/15831000/pexels-photo-15831000.jpeg" alt="Pommes rouges entières et tranchées vues de dessus sur table en bois" width="900" height="600" loading="lazy">
+              <figcaption>En usage courant, on mange la chair et on jette le trognon — c'est le réflexe le plus sûr pour toute la famille.</figcaption>
+            </figure>
+
+            <p><strong>Avaler ou mâcher : la nuance qui change tout.</strong> Avaler un pépin entier sans le broyer limite fortement la libération d'amygdaline : la coque passe souvent intacte dans le transit. C'est la mastication prolongée de dizaines de pépins — par curiosité, pari entre ados ou trouble alimentaire — qui pose problème. D'où la différence essentielle avec la pastèque : même en quantité, ses graines ne contiennent tout simplement pas cette molécule.</p>
+
+            <p class="wm-apple-alert"><strong>Autres fruits concernés (même famille) :</strong> les pépins de poire suivent la même logique que la pomme. Le noyau d'abricot, plus dur, est encore plus riche en amygdaline : on ne le croque jamais volontairement, et une ingestion accidentelle isolée reste, là encore, très éloignée des scénarios toxiques décrits dans la presse.</p>
+
+            <div class="wm-apple-family" aria-label="Fruits de la famille des Rosacées">
+              <span>Pomme</span>
+              <span>Poire</span>
+              <span>Prune</span>
+              <span>Cerise</span>
+              <span>Abricot (noyau)</span>
+            </div>
+
+            <h3 style="margin-top:2rem; color:#b45309; font-size:1.2rem;">Et pour les enfants ?</h3>
+            <p>Beaucoup de parents associent la pastèque à la pomme et crient au scandale dès qu'une graine noire disparaît dans la bouche du petit. Pour la pastèque, c'est inutile. Pour la pomme, quelques réflexes simples suffisent :</p>
+
+            <ul class="wm-apple-kids">
+              <li><strong>Rien à craindre</strong> si un ou deux pépins partent avalés avec le dessert, sans mastication du trognon entier.</li>
+              <li><strong>Éviter</strong> de laisser l'enfant croquer volontairement plusieurs trognons « pour voir » — comportement rare, mais c'est bien la répétition qui compte.</li>
+              <li><strong>Couper en quartiers</strong> et retirer le cœur pour les plus petits : pratique, rassurante, sans interdire la pomme.</li>
+              <li><strong>En cas de doute</strong> (malaise, nausées après ingestion de nombreux trognons) : appelez le centre antipoison ou le médecin — pas parce qu'un seul pépin est dangereux, mais par prudence médicale.</li>
+            </ul>
+
+            <p style="margin-top:1.5rem; margin-bottom:0;"><strong>Le mot de la fin sur la pomme :</strong> oui, le lien avec le cyanure existe — mais il est réservé à des situations extrêmes, bien loin du quotidien. Comparer cette réalité aux pépins de pastèque n'a pas de sens scientifique. Vous pouvez continuer à servir les deux fruits l'été sans culpabilité ; pour la pomme, jetez simplement le trognon comme vous le faisiez déjà, et détendez-vous si une graine de pastèque passe.</p>
+          </section>
 
           <figure class="wm-figure wm-reveal">
             <img src="https://images.pexels.com/photos/31051336/pexels-photo-31051336.jpeg" alt="Pique-nique estival avec fruits frais sur une couverture" width="900" height="600" loading="lazy">
