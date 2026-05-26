@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pépins de pastèque avalés par vos enfants : faut-il craindre le cyanure ?</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:opsz,wght@9..144,600;700&display=swap">
+  <link rel="stylesheet" href="/shared/base.css">
+  <link rel="stylesheet" href="/landings/PURST/advert/advertorial/_type.css">
+  <style>
+    :root {
+      --wm-red: #e63946;
+      --wm-pink: #ff6b8a;
+      --wm-green: #2d6a4f;
+      --wm-cream: #fff8f0;
+      --wm-dark: #1a1a2e;
+      --wm-gold: #f4a261;
+    }
+
+    body.advertorial.pasteque-landing {
+      background: var(--wm-cream);
+      font-family: "DM Sans", system-ui, sans-serif;
+    }
+
+    .pasteque-landing .advertorial-header {
+      border-bottom-color: var(--wm-red);
+      background: linear-gradient(180deg, #fff 0%, var(--wm-cream) 100%);
+    }
+
+    .pasteque-landing .advertorial-logo {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(1.1rem, 3vw, 1.6rem);
+      color: var(--wm-dark);
+      letter-spacing: 0.05em;
+    }
+
+    .pasteque-landing .advertorial-container {
+      border-radius: 0 0 24px 24px;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(230, 57, 70, 0.12);
+    }
+
+    .wm-hero {
+      position: relative;
+      min-height: clamp(280px, 55vw, 520px);
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+    }
+
+    .wm-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .wm-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26,26,46,0.15) 0%, rgba(26,26,46,0.75) 85%);
+    }
+
+    .wm-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: clamp(1.5rem, 5vw, 3rem);
+      color: #fff;
+      max-width: 900px;
+    }
+
+    .wm-badge {
+      display: inline-block;
+      background: var(--wm-red);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .pasteque-landing h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(1.6rem, 5vw, 2.75rem);
+      line-height: 1.15;
+      color: #fff;
+      margin: 0 0 1rem;
+      font-weight: 700;
+    }
+
+    .wm-hero-lead {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      opacity: 0.95;
+      line-height: 1.5;
+      max-width: 42ch;
+    }
+
+    .wm-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      padding: 0.5rem;
+      background: var(--wm-dark);
+    }
+
+    .wm-gallery img {
+      width: 100%;
+      height: clamp(80px, 18vw, 140px);
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .wm-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      padding: 1rem clamp(1rem, 4vw, 2rem);
+      background: #fff;
+      border-bottom: 3px solid var(--wm-pink);
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .wm-meta-bar strong { color: var(--wm-dark); }
+
+    .wm-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: clamp(1rem, 4vw, 2rem);
+    }
+
+    @media (min-width: 1024px) {
+      .wm-layout {
+        grid-template-columns: 1fr 320px;
+      }
+    }
+
+    .wm-intro {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--wm-dark);
+      border-left: 4px solid var(--wm-red);
+      padding-left: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .wm-figure {
+      margin: 2rem 0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    }
+
+    .wm-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .wm-figure figcaption {
+      background: var(--wm-green);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+    }
+
+    .wm-compare {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 2.5rem 0;
+    }
+
+    @media (min-width: 640px) {
+      .wm-compare { grid-template-columns: 1fr 1fr; }
+    }
+
+    .wm-card {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .wm-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+    }
+
+    .wm-card--safe {
+      background: linear-gradient(145deg, #d8f3dc 0%, #fff 60%);
+      border-color: var(--wm-green);
+    }
+
+    .wm-card--warn {
+      background: linear-gradient(145deg, #ffe5d9 0%, #fff 60%);
+      border-color: var(--wm-gold);
+    }
+
+    .wm-card-img {
+      height: 160px;
+      overflow: hidden;
+    }
+
+    .wm-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .wm-card-body {
+      padding: 1.25rem;
+    }
+
+    .wm-card-body h4 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.2rem;
+      margin: 0 0 0.5rem;
+      color: var(--wm-dark);
+    }
+
+    .wm-card-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .wm-card--safe .wm-card-tag { background: var(--wm-green); color: #fff; }
+    .wm-card--warn .wm-card-tag { background: var(--wm-gold); color: #fff; }
+
+    .wm-stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .wm-stat {
+      text-align: center;
+      padding: 1.25rem;
+      background: #fff;
+      border-radius: 16px;
+      border: 2px dashed var(--wm-pink);
+    }
+
+    .wm-stat-num {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 2rem;
+      color: var(--wm-red);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .wm-stat-label {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 0.35rem;
+    }
+
+    .wm-tips {
+      background: linear-gradient(135deg, var(--wm-green) 0%, #1b4332 100%);
+      color: #fff;
+      border-radius: 20px;
+      padding: clamp(1.5rem, 4vw, 2rem);
+      margin: 2.5rem 0;
+    }
+
+    .wm-tips h3 {
+      font-family: "Fraunces", Georgia, serif;
+      color: #fff;
+      margin-top: 0;
+    }
+
+    .wm-tips-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .wm-tips-grid { grid-template-columns: 1fr 1fr; align-items: center; }
+    }
+
+    .wm-tips-grid img {
+      width: 100%;
+      border-radius: 12px;
+      max-height: 220px;
+      object-fit: cover;
+    }
+
+    .wm-tips ol {
+      margin: 0;
+      padding-left: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .wm-myth {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+
+    .wm-myth-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: var(--wm-red);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .pasteque-landing h3 {
+      font-family: "Fraunces", Georgia, serif;
+      color: var(--wm-red);
+      font-size: clamp(1.25rem, 3vw, 1.6rem);
+      margin-top: 2.5rem;
+    }
+
+    .pasteque-landing .advertorial-content p {
+      line-height: 1.75;
+      font-size: 1.05rem;
+    }
+
+    .pasteque-landing .advertorial-btn {
+      background: linear-gradient(135deg, var(--wm-red), var(--wm-pink));
+      border: none;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      padding: 1rem 2rem;
+      box-shadow: 0 8px 24px rgba(230, 57, 70, 0.35);
+    }
+
+    .pasteque-landing .advertorial-sidebar-box {
+      border: 2px solid var(--wm-pink);
+      border-radius: 16px;
+      background: linear-gradient(180deg, #fff 0%, var(--wm-cream) 100%);
+    }
+
+    .pasteque-landing .advertorial-btn-sidebar {
+      background: var(--wm-green);
+      border-radius: 10px;
+    }
+
+    .wm-sources {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+
+    .wm-reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .wm-reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 480px) {
+      .wm-gallery { grid-template-columns: 1fr 1fr; }
+      .wm-gallery img:last-child { grid-column: span 2; }
+    }
+  </style>
+</head>
+<body class="advertorial pasteque-landing">
+  <div class="advertorial-banner">Advertorial — Article publicitaire</div>
+  <header class="advertorial-header">
+    <div class="advertorial-logo">Nutrition &amp; Famille</div>
+  </header>
+
+  <main class="advertorial-container">
+    <section class="wm-hero" aria-label="Illustration principale">
+      <img src="https://images.pexels.com/photos/9166517/pexels-photo-9166517.jpeg" alt="Tranches de pastèque juteuses garnies de menthe, symbole de l'été" width="1280" height="720" loading="eager">
+      <div class="wm-hero-overlay" aria-hidden="true"></div>
+      <div class="wm-hero-content">
+        <span class="wm-badge">Été 2026 — Dossier santé</span>
+        <h1>Ces pépins de pastèque avalés par vos enfants : faut-il vraiment s'inquiéter du cyanure comme pour les pommes ?</h1>
+        <p class="wm-hero-lead">Chaque été, la même panique revient. Entre croyances familiales et données scientifiques, la réponse vous surprendra.</p>
+      </div>
+    </section>
+
+    <div class="wm-gallery" aria-hidden="true">
+      <img src="https://images.pexels.com/photos/1591183/pexels-photo-1591183.jpeg" alt="" width="400" height="300" loading="lazy">
+      <img src="https://images.pexels.com/photos/29112518/pexels-photo-29112518.jpeg" alt="" width="400" height="300" loading="lazy">
+      <img src="https://images.pexels.com/photos/8755954/pexels-photo-8755954.jpeg" alt="" width="400" height="300" loading="lazy">
+    </div>
+
+    <div class="wm-meta-bar">
+      <span>Par <strong>La rédaction PureSanté</strong></span>
+      <span>Publié le <time id="article-date"></time></span>
+      <span>Lecture : <strong>6 min</strong></span>
+    </div>
+
+    <div class="wm-layout">
+      <div class="advertorial-content">
+        <div class="advertorial-main">
+          <p class="wm-intro wm-reveal">L'été, on croque des quartiers de pastèque gorgés d'eau — et les enfants avalent parfois les petites graines noires sans y penser. Dans beaucoup de familles, la peur arrive aussitôt : ces pépins libéreraient-ils du cyanure, comme ceux de la pomme ?</p>
+
+          <figure class="wm-figure wm-reveal">
+            <img src="https://images.pexels.com/photos/5275822/pexels-photo-5275822.jpeg" alt="Enfants savourant de la pastèque en plein air un jour d'été" width="900" height="600" loading="lazy">
+            <figcaption>Scène familière : les graines partent souvent avalées en une bouchée — sans danger toxique.</figcaption>
+          </figure>
+
+          <p class="wm-reveal">Cette comparaison entretient une vraie confusion. En réalité, les pépins de pastèque (<em>Citrullus lanatus</em>) ne jouent pas du tout dans la même catégorie que ceux de la pomme. Le fruit est composé de plus de 90&nbsp;% d'eau, riche en vitamine&nbsp;C, bêta-carotène et lycopène. Ses graines ne contiennent pas d'amygdaline, la molécule qui peut libérer du cyanure dans certains noyaux.</p>
+
+          <div class="wm-stat-row wm-reveal">
+            <div class="wm-stat">
+              <div class="wm-stat-num">90&nbsp;%</div>
+              <div class="wm-stat-label">d'eau dans la pastèque</div>
+            </div>
+            <div class="wm-stat">
+              <div class="wm-stat-num">0</div>
+              <div class="wm-stat-label">composé cyanogène identifié</div>
+            </div>
+            <div class="wm-stat">
+              <div class="wm-stat-num">~200</div>
+              <div class="wm-stat-label">pépins de pomme pour un risque théorique (adulte 70&nbsp;kg)</div>
+            </div>
+          </div>
+
+          <h3 class="wm-reveal">Pépins de pastèque : aucun poison, mais des atouts santé</h3>
+
+          <p class="wm-reveal">Pour la diététicienne Stéphanie Drieu, citée par France Bleu et Marmiton, ces petites graines sont même intéressantes sur le plan nutritionnel. Elles contiennent des acides gras insaturés, des fibres, des vitamines et des antioxydants bénéfiques. Aucun composé cyanogène n'a été identifié dans les graines de pastèque.</p>
+
+          <figure class="wm-figure wm-reveal">
+            <img src="https://images.pexels.com/photos/7420422/pexels-photo-7420422.jpeg" alt="Graines naturelles, riches en fibres et nutriments" width="900" height="600" loading="lazy">
+            <figcaption>Comme les graines de courge : les pépins de pastèque peuvent devenir un encas maison grillé.</figcaption>
+          </figure>
+
+          <p class="wm-reveal">Croq'Kilos rappelle toutefois qu'un excès de fibres peut perturber un intestin fragile. Avaler une grande quantité de pépins entiers peut ballonner ou constiper — sans rapport avec un poison. L'astuce : les récupérer, les faire griller et les parsemer sur salades ou yaourts, zéro gâchis.</p>
+
+          <h3 class="wm-reveal">Pastèque vs pomme : la vraie différence</h3>
+
+          <div class="wm-compare wm-reveal">
+            <article class="wm-card wm-card--safe">
+              <div class="wm-card-img">
+                <img src="https://images.pexels.com/photos/8755954/pexels-photo-8755954.jpeg" alt="Pastèque fraîche en tranches" width="500" height="320" loading="lazy">
+              </div>
+              <div class="wm-card-body">
+                <span class="wm-card-tag">Rassurant</span>
+                <h4>Pépins de pastèque</h4>
+                <p>Pas d'amygdaline. Fibres, antioxydants, acides gras insaturés. Avalés en petite quantité : sans risque de cyanure.</p>
+              </div>
+            </article>
+            <article class="wm-card wm-card--warn">
+              <div class="wm-card-img">
+                <img src="https://images.pexels.com/photos/8249146/pexels-photo-8249146.jpeg" alt="Pommes rouges coupées sur planche en bois" width="500" height="320" loading="lazy">
+              </div>
+              <div class="wm-card-body">
+                <span class="wm-card-tag">À nuancer</span>
+                <h4>Pépins de pomme</h4>
+                <p>Contiennent de l'amygdaline (famille des Rosacées). Danger seulement en consommation massive et répétée, trognon bien mâché.</p>
+              </div>
+            </article>
+          </div>
+
+          <p class="wm-reveal">Les pépins de pomme, poire ou le noyau d'abricot libèrent du cyanure lors de la mastication. Pour un adulte de 70&nbsp;kg, la dose létale théorique évoquée par Santé Magazine tourne autour de 200 pépins — soit près de 40 trognons bien croqués. Avaler par erreur quelques pépins en fin de dessert, chez un enfant comme chez un adulte, reste très loin de ce scénario.</p>
+
+          <figure class="wm-figure wm-reveal">
+            <img src="https://images.pexels.com/photos/31051336/pexels-photo-31051336.jpeg" alt="Pique-nique estival avec fruits frais sur une couverture" width="900" height="600" loading="lazy">
+            <figcaption>L'été, mangez sereinement : la pastèque reste un allié fraîcheur pour toute la famille.</figcaption>
+          </figure>
+
+          <h3 class="wm-reveal">Bien profiter des pépins sans se faire peur</h3>
+
+          <div class="wm-tips wm-reveal">
+            <h3>3 gestes anti-gaspillage</h3>
+            <div class="wm-tips-grid">
+              <img src="https://images.pexels.com/photos/28898628/pexels-photo-28898628.png" alt="Bol de graines grillées prêtes à grignoter" width="600" height="400" loading="lazy">
+              <ol>
+                <li>Récupérez les pépins, rincez-les à l'eau claire.</li>
+                <li>Faites-les griller quelques minutes au four avec un filet d'huile et des épices.</li>
+                <li>Ajoutez-les à un smoothie, un bol de yaourt ou une salade — comme des graines de tournesol.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="wm-myth wm-reveal">
+            <span class="wm-myth-icon" aria-hidden="true">?</span>
+            <div>
+              <strong>Mythe démonté :</strong> une graine ne peut pas « pousser » dans le ventre. L'acidité de l'estomac empêche toute germination. On évite seulement de trop grosses quantités chez les tout-petits (risque de fausse route ou maux de ventre).
+            </div>
+          </div>
+
+          <figure class="wm-figure wm-reveal">
+            <img src="https://images.pexels.com/photos/36765537/pexels-photo-36765537.jpeg" alt="Mère et enfant en cuisine, moment de sérénité familiale" width="900" height="600" loading="lazy">
+            <figcaption>Conseil pratique : laissez chacun mastiquer à son rythme, sans stress inutile.</figcaption>
+          </figure>
+
+          <figure class="wm-figure wm-reveal">
+            <img src="https://images.pexels.com/photos/5678036/pexels-photo-5678036.jpeg" alt="Assortiment de légumes frais colorés, alimentation équilibrée" width="900" height="600" loading="lazy">
+            <figcaption>Une alimentation variée et de saison : la meilleure réponse aux peurs de l'été.</figcaption>
+          </figure>
+
+          <p class="wm-reveal"><strong>En résumé :</strong> les pépins de pastèque ne sont pas toxiques comme ceux des pommes. Ils peuvent même devenir un encas nutritif. La seule vigilance : quantité raisonnable pour les intestins sensibles et les plus jeunes.</p>
+
+          <div style="text-align:center; margin: 2.5rem 0;" class="wm-reveal">
+            <button type="button" class="advertorial-btn trigger-popup">Recevoir le guide « Été sans stress » gratuit »</button>
+          </div>
+
+          <p class="wm-sources wm-reveal">Sources : Marmiton, France Bleu, Santé Magazine, Croq'Kilos, InspireFrance — article inspiré du dossier Top Santé.</p>
+        </div>
+      </div>
+
+      <aside class="advertorial-sidebar">
+        <div class="advertorial-sidebar-box wm-reveal">
+          <img src="https://images.pexels.com/photos/9166517/pexels-photo-9166517.jpeg" alt="Guide nutrition estivale" width="280" height="180" loading="lazy" style="width:100%; border-radius:12px; margin-bottom:1rem;">
+          <p style="font-size:16px; line-height:1.5; margin-bottom:15px;">
+            <strong>Guide gratuit</strong><br><br>
+            Pastèque, pépins, fruits d'été : ce qu'il faut vraiment savoir pour rassurer toute la famille.
+          </p>
+          <button type="button" class="advertorial-btn-sidebar trigger-popup">Télécharger le guide »</button>
+          <hr style="border:0; border-top:1px solid #ddd; margin:20px 0;">
+          <p style="font-size:14px; color:#666;">
+            <strong>Lu par :</strong> 12 400 familles<br>
+            <strong>Note :</strong> ★★★★★ (4,8/5)
+          </p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="advertorial-footer">
+    <div class="advertorial-disclaimer">
+      <p><strong>IMPORTANT :</strong> Contenu à visée informative et promotionnelle. Les résultats individuels peuvent varier. Ce texte ne remplace pas l'avis d'un professionnel de santé. En cas de doute ou de malaise après ingestion, consultez un médecin.</p>
+    </div>
+  </footer>
+
+  <div id="ctaModal" class="advertorial-modal">
+    <div class="advertorial-modal-content">
+      <span class="advertorial-modal-close" aria-label="Fermer">×</span>
+      <form class="advertorial-form" method="GET" action="https://curiosity.pure-sante.info/clicklead/add">
+        <input type="hidden" name="sourceCode" value="PST773740001">
+        <div class="advertorial-form-row">
+          <div class="advertorial-form-text">
+            <p style="font-size:18px; line-height:1.4; font-weight:bold; color:#2c3e50;">Recevez le guide « Été sans stress » — fruits, pépins et idées recettes.</p>
+            <p style="font-size:15px; margin-top:10px;">Entrez votre email pour <strong>télécharger immédiatement.</strong></p>
+          </div>
+          <div class="advertorial-form-img">
+            <img src="https://images.pexels.com/photos/1591183/pexels-photo-1591183.jpeg" alt="Guide nutrition estivale" width="250" height="167" loading="lazy">
+          </div>
+        </div>
+        <input type="email" class="advertorial-form-input" name="email" placeholder="Votre adresse email..." required>
+        <div style="text-align:center;">
+          <input type="submit" class="advertorial-btn-submit" value="Recevoir mon guide !">
+        </div>
+        <p style="margin-top:15px; font-size:12px; color:#777; text-align:center;"><em>Lettre gratuite PureSanté — désinscription à tout moment.</em></p>
+        <p style="margin-top:10px; font-size:11px; color:#999; text-align:center;"><a href="https://pure-sante.info/notre-politique-de-confidentialite/" style="color:#777;">Politique de confidentialité</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var d = new Date();
+      d.setDate(d.getDate() - 1);
+      var el = document.getElementById('article-date');
+      if (el) el.textContent = d.toLocaleDateString('fr-FR');
+    })();
+    (function() {
+      var modal = document.getElementById('ctaModal');
+      var closeBtn = document.querySelector('.advertorial-modal-close');
+      document.querySelectorAll('.trigger-popup').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          modal.style.display = 'flex';
+        });
+      });
+      if (closeBtn) closeBtn.onclick = function() { modal.style.display = 'none'; };
+      window.onclick = function(e) {
+        if (e.target === modal) modal.style.display = 'none';
+      };
+      var source = new URLSearchParams(window.location.search).get('source');
+      if (source) {
+        var input = document.querySelector('input[name="sourceCode"]');
+        if (input) input.value = source;
+      }
+    })();
+    (function() {
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.wm-reveal').forEach(function(el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.wm-reveal').forEach(function(el) { obs.observe(el); });
+    })();
+  </script>
+</body>
+</html>
